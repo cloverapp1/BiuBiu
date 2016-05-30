@@ -72,7 +72,7 @@
     
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 49)];
-    backView.backgroundColor = [UIColor blackColor];
+    backView.backgroundColor = [UIColor cyanColor];
     [self.tabBar insertSubview:backView atIndex:0];
     self.tabBar.tintColor = [UIColor redColor];
     
@@ -108,10 +108,7 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 
 #pragma mark -
@@ -119,10 +116,6 @@
 - (UINavigationController *)addNavigationItemForViewController:(UIViewController *)viewController
 {
     
-//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-//    
-//    
-//    return navigationController;
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     
@@ -175,7 +168,6 @@
             imagePickerController.delegate = self;
             imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
             imagePickerController.allowsEditing = NO;
-//            imagePickerController.mediaTypes = @[(NSString *)kUTTypeImage];
             
             [self presentViewController:imagePickerController animated:YES completion:nil];
             
